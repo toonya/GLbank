@@ -9,13 +9,14 @@
 	.page {
 		width: 100%;
 		height: 100%;
-		position: relative;
+		position: absolute;
 		overflow: hidden;
 	}
 
 	.banner, .agreement, .connect-step, .footer {
 		position: absolute;
 		width: 100%;
+		overflow: hidden;
 	}
 
 	.banner {
@@ -37,24 +38,51 @@
 	}
 
 	.agreement {
-		height: 31%;
+		height: 33%;
 		top: 39%;
 
 
 		h1 {
 			text-align: center;
 			font-size: 14px;
-			margin-bottom: 12px;
+			padding-bottom: 6px;
 		}
 	}
 
 	.connect-step {
-		height: 21%;
+		height: 19%;
 		bottom: 9%;
 		color: #ffff00;
 
-		.step-describe {
-			font-size: 14px;
+		.left {
+			width: 65%;
+			padding-right: 5%;
+			left: 0;
+		}
+
+		.right {
+			width: 35%;
+			right: 0;
+
+			.img-responsive {
+				max-height: 95%;
+				display: block;
+			}
+		}
+
+		.step-container {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			padding: 0 15px;
+		}
+
+		.left, .right {
+			position: absolute;
+			padding: 0 15px;
+			top: 0;
+
+			max-height: 100%;
 		}
 	}
 
@@ -104,10 +132,40 @@
 
 // step list
 ul.step {
-	margin-top: 8px;
+	margin: 0 0 0 12px;
 	padding-left: 18px;
 
 	li {
-		line-height: 24px;
+		line-height: 20px;
+	}
+}
+
+
+//responsive code
+@media (max-height: 420px ) and ( max-width: 400px ) {
+	.mobile .agreement {
+		p:nth-of-type(1) {
+			display: none;
+		}
+	}
+
+	.mobile {
+		font-size: 10px;
+
+		.agreement {
+			height: 27%;
+		}
+
+		.connect-step {
+			height: 25%;
+		}
+	}
+}
+
+@media (max-height: 440px) {
+	.mobile .agreement {
+		p.text-right {
+			display: none;
+		}
 	}
 }

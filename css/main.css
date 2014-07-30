@@ -358,12 +358,12 @@ ul.step li {
 ul.step li::after {
   position: absolute;
   left: -26px;
-  width: 20px;
-  height: 20px;
-  top: 2px;
-  border-radius: 10px;
+  width: 16px;
+  height: 16px;
+  top: 4px;
+  border-radius: 8px;
   text-align: center;
-  line-height: 20px;
+  line-height: 16px;
   background: #ffff00;
   color: #902865;
   font-weight: bold;
@@ -404,7 +404,7 @@ ul.step li:nth-of-type(9)::after {
 .mobile .page {
   width: 100%;
   height: 100%;
-  position: relative;
+  position: absolute;
   overflow: hidden;
 }
 .mobile .banner,
@@ -413,6 +413,7 @@ ul.step li:nth-of-type(9)::after {
 .mobile .footer {
   position: absolute;
   width: 100%;
+  overflow: hidden;
 }
 .mobile .banner {
   height: 39%;
@@ -431,21 +432,44 @@ ul.step li:nth-of-type(9)::after {
   width: 100%;
 }
 .mobile .agreement {
-  height: 31%;
+  height: 33%;
   top: 39%;
 }
 .mobile .agreement h1 {
   text-align: center;
   font-size: 14px;
-  margin-bottom: 12px;
+  padding-bottom: 6px;
 }
 .mobile .connect-step {
-  height: 21%;
+  height: 19%;
   bottom: 9%;
   color: #ffff00;
 }
-.mobile .connect-step .step-describe {
-  font-size: 14px;
+.mobile .connect-step .left {
+  width: 65%;
+  padding-right: 5%;
+  left: 0;
+}
+.mobile .connect-step .right {
+  width: 35%;
+  right: 0;
+}
+.mobile .connect-step .right .img-responsive {
+  max-height: 95%;
+  display: block;
+}
+.mobile .connect-step .step-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+}
+.mobile .connect-step .left,
+.mobile .connect-step .right {
+  position: absolute;
+  padding: 0 15px;
+  top: 0;
+  max-height: 100%;
 }
 .mobile .footer {
   height: 9%;
@@ -483,9 +507,28 @@ ul.step li:nth-of-type(9)::after {
           transform: translateY(-50%);
 }
 ul.step {
-  margin-top: 8px;
+  margin: 0 0 0 12px;
   padding-left: 18px;
 }
 ul.step li {
-  line-height: 24px;
+  line-height: 20px;
+}
+@media (max-height: 420px) and (max-width: 400px) {
+  .mobile .agreement p:nth-of-type(1) {
+    display: none;
+  }
+  .mobile {
+    font-size: 10px;
+  }
+  .mobile .agreement {
+    height: 27%;
+  }
+  .mobile .connect-step {
+    height: 25%;
+  }
+}
+@media (max-height: 440px) {
+  .mobile .agreement p.text-right {
+    display: none;
+  }
 }
