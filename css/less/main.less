@@ -1,0 +1,117 @@
+@import 'basic.less';
+
+.mobile {
+	background: url(../img/main-bg.jpg);
+	background-position: 0 39%;
+	color: #fff;
+	font-size: 14px;
+
+	.container {
+		padding: 0 36px;
+	}
+
+	.page {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.banner, .agreement, .connect-step, .footer {
+		position: absolute;
+		width: 100%;
+	}
+
+	.banner {
+		height: 39%;
+		top: 0;
+
+		.carousel-inner, .item {
+			height: 100%;
+		}
+
+		&::after {
+			position: absolute;
+			content: " ";
+			background: #fff;
+			height: 5px;
+			bottom: 0;
+			width: 100%;
+		}
+	}
+
+	.agreement {
+		height: 31%;
+		top: 39%;
+
+
+		h1 {
+			text-align: center;
+			font-size: 16px;
+			margin-bottom: 12px;
+		}
+	}
+
+	.connect-step {
+		height: 21%;
+		bottom: 9%;
+		color: #ffff00;
+
+		.step-describe {
+			font-size: 16px;
+		}
+	}
+
+	.footer {
+		height: 9%;
+		bottom: 0;
+
+		background: #fff;
+
+		.img-responsive {
+			max-height: 75%;
+			margin: 0 auto;
+		}
+	}
+}
+
+// 垂直居中的 布局层
+.v-center-layer {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+// 固定高度的 carousel
+.carousel-h-static.carousel {
+	height: 100%;
+
+	.carousel-indicators {
+		bottom: -14px;
+	}
+
+	.item {
+		.img-wrapper {
+			position: relative;
+			height: 100%;
+			overflow: hidden;
+
+			img {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}
+
+// step list
+ul.step {
+	margin-top: 8px;
+	padding-left: 18px;
+
+	li {
+		line-height: 24px;
+	}
+}
