@@ -1,0 +1,208 @@
+﻿body
+{
+    font-family: 新宋体, Arial;
+    font-size: 16px;
+	margin:0 auto;
+    padding: 1px;
+}
+
+div
+{    
+	margin:0 auto;
+	text-align:left;
+}
+
+header{
+    width: 320px;
+    height: 215px;
+    /*background: url("images/header.jpg") no-repeat;
+    background-size: 320px 215px;*/
+	margin:0 auto;
+}
+
+.body{
+    width: 320px;
+    height: 258px;
+    background: url("images/body.jpg") no-repeat;
+    background-size: 320px 338px;
+    color: #FFFFFF;
+    line-height: 25px;
+}
+
+    .body article header {
+        background: none;
+        width: auto;
+        height: auto;
+        text-align: center;
+        padding: 10px 0px 5px;
+    }
+
+    .body article p {
+        margin: 0px 10px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .body .agree-content {
+        margin: 0px 10px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+        .body .agree-content input {
+            vertical-align: middle;
+        }
+
+    .body .login-area{
+        height:68px;
+        margin: 5px 10px;
+        background-color: #661445;
+        position: relative;
+    }
+
+    .body .weixin-area{
+        height:98px;
+        margin: 5px 10px;
+        background-color: #661445;
+        position: relative;
+    }
+
+    .body .login-area table{
+        border-spacing: 2px;
+        position: absolute;
+        left: 5px;
+        top: 4px;
+    }
+
+        .body .login-area table th {
+            font-weight: normal;
+        }
+
+    .body .login-area table .button-login{
+        width: 63px;
+        height: 54px;
+        cursor: pointer;
+        margin-left: 4px;
+		padding:1;
+		text-align:center;
+		vertical-align:middle;
+		font-size:18px;
+		font:bold;
+    }
+
+        .body .login-area table #mobileNum {
+            width: 140px;
+            padding: 2px;
+        }
+
+        .body .login-area table #smsCode {
+            width: 70px;
+            padding: 2px;
+        }
+
+        .body .login-area table .button-getcode {
+            width: 63px;
+            height: 22px;
+            cursor: pointer;
+			padding:0;
+			text-align:center;
+			vertical-align:middle;
+        }
+
+        .body .weixin-area .weixin-notes {
+            right: 3px;
+            top: 10px;
+			text-align:left;
+			margin:0 auto;
+        }
+
+        .body .weixin-area .weixin-code {
+            width: 92px;
+            height: 92px;
+            background: url("images/weixin-code.jpg") no-repeat;
+            background-size: 92px 92px;
+            position: absolute;
+            right: 3px;
+            top: 3px;
+        }
+
+    .body article footer {
+        background: none;
+        width: auto;
+        height: auto;
+        font-size: 12px;
+        text-align: right;
+        padding: 0px 10px;
+    }
+
+footer{
+    width: 320px;
+    height: 25px;
+    background: url("images/footer.jpg") no-repeat;
+    background-size: 320px 25px;
+	margin:0 auto;
+}
+
+.ad-area {
+    height: 100%;
+    position: relative;
+}
+
+    .ad-area .ad-container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        display: none;
+        z-index: 9;
+    }
+
+    .ad-area .ad-active {
+        z-index: 10;
+    }
+
+    .ad-area .ad-container .ad-image {
+        width: 320px;
+        height: 215px;
+        border: 0px;
+    }
+
+    .ad-area .ad-container0 {
+        background: green;
+    }
+
+    .ad-area .ad-container .ad-image0{
+        background: url("images/ad/mobile/ad-image0.jpg");
+    }
+
+    .ad-area .ad-container1{
+        background: yellow;
+    }
+
+    .ad-area .ad-container .ad-image1{
+        background: url("images/ad/mobile/ad-image1.jpg");
+    }
+
+    .ad-area .ad-navigation{
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        width: 50px;
+        margin-left: -25px;
+        text-align: center;
+        z-index: 11;
+    }
+
+    .ad-area .ad-navigation .item{
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #FFFFFF;
+        display: inline-block;
+    }
+
+    .ad-area .ad-navigation .item-active{
+        background-color: #000000;
+    }

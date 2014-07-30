@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no;">
+    <title></title>
+    <link href="theme/mportal.css" type="text/css" rel="stylesheet" />  
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/ad-slide.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            initAd();
+        });
+
+    </script>  
+</head>
+<body>
+    <header>
+        <div class="ad-area">
+            <div class="ad-container ad-container0"><div class="ad-image ad-image0"></div></div>
+            <div class="ad-container ad-container1"><div class="ad-image ad-image1"></div></div>
+
+            <div class="ad-navigation">
+                <span class="item"></span>
+                <span class="item"></span>
+            </div>
+        </div>
+    </header>
+
+	<div class="body">
+        <article>
+            <header>温馨提醒</header>
+            <p>您好：<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;欢迎光临桂林银行 <?php echo empty($data['note_name'])?'':$data['note_name'];?> ，您已通过微信 <font color="#FF0000">一键上网</font> 登录我行提供的免费Wi-Fi。我行竭诚提供优质的互联网接入环境，但不承担客户在访问互联网过程中所产生的相关风险。</p>
+            <footer>桂林银行</footer>
+        </article>
+		<p align="center"><input type="button" class="backup" value="退回到微信" onclick="WeixinJSBridge.call('closeWindow');" /></p><br>
+	</div>
+   <footer></footer>
+</body>
+</html>

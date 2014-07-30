@@ -1,0 +1,179 @@
+﻿body
+{
+    font-family: 新宋体, Arial;
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.login-main{
+    width: 1009px;
+    height: 408px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -204px 0px 0px -505px;
+    background: url("images/pc-body-bg.png") no-repeat 0px bottom;
+}
+
+    .login-main .header {
+        width: 515px;
+        height: 375px;
+        background: url("images/pc-header.jpg") no-repeat;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+
+    .login-main .body{
+        width: 474px;
+        height: 355px;
+        background: url("images/pc-body.jpg") no-repeat;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        color: #FFFFFF;
+        line-height: 25px;
+        padding: 10px;
+    }
+
+        .login-main .body .article .header {
+            background: none;
+            width: auto;
+            height: auto;
+            text-align: center;
+            padding: 10px 0px;
+            position: relative;
+            font-size: 20px;
+        }
+
+        .login-main .body .article p {
+            margin: 0px 10px;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        .login-main .body .agree-content {
+	font-size: 14px;
+	line-height: 40px;
+	margin-top: 0px;
+	margin-right: 20px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+        }
+
+        .login-main .body .agree-content input {
+            vertical-align: middle;
+        }
+
+        .login-main .body .article .footer {
+            background: none;
+            width: auto;
+            height: auto;
+            font-size: 14px;
+            text-align: right;
+            padding: 0px 10px;
+        }
+
+        .login-main .body .login-area{
+	width: 450px;
+	height: 140px;
+	background-color: #661445;
+	position: absolute;
+	left: 23px;
+	bottom: 5px;
+        }
+
+            .login-main .body .login-area table {
+	border-spacing: 2px;
+	position: absolute;
+	left: 9px;
+	top: 9px;
+	color: #FFFFFF;
+	width: 433px;
+            }
+
+            .login-main .body .login-area table th {
+                font-weight: normal;
+            }
+
+            .login-main .body .login-area table .button-login {
+                width: 99px;
+                height: 36px;
+                background: url("images/pc-button-login.jpg") no-repeat;
+                cursor: pointer;
+                border: 0px;
+            }
+
+                .login-main .body .login-area table #WeixinCode {
+                    font-size: 20px;
+                    height: 26px;
+                    padding: 5px;
+                    width: 160px;
+					/*font-stretch:*/
+                }
+
+.ad-area {
+    position: relative;
+    height: 325px;
+    background-color: #FFFFFF;
+}
+
+    .ad-area .ad-container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        display: none;
+        z-index: 9;
+    }
+
+    .ad-area .ad-active {
+        z-index: 10;
+    }
+
+    .ad-area .ad-container .ad-image {
+        width: 515px;
+        height: 325px;
+        border: 0px;
+    }
+
+    .ad-area .ad-container0 {
+        background: green;
+    }
+
+    .ad-area .ad-container .ad-image0{
+        background: url("images/ad/pc/ad-image0.jpg");
+    }
+
+    .ad-area .ad-container1{
+        background: yellow;
+    }
+
+    .ad-area .ad-container .ad-image1{
+        background: url("images/ad/pc/ad-image1.jpg");
+    }
+
+    .ad-area .ad-navigation{
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        width: 50px;
+        margin-left: -25px;
+        text-align: center;
+        z-index: 11;
+    }
+
+    .ad-area .ad-navigation .item{
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #FFFFFF;
+        display: inline-block;
+    }
+
+    .ad-area .ad-navigation .item-active{
+        background-color: #000000;
+    }

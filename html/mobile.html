@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no;">
+    <title></title>
+    <link href="theme/mobile.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/ad-slide.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            initAd();
+        });
+
+    </script>
+    
+<Script type="text/javascript">
+//检验手机号是否合服规范
+function checkMobileNum(mobileNum)
+{
+    if((/^1[3|4|5|8][0-9]\d{4,8}$/.test(mobileNum)) == false)
+	{
+        alert("不是完整的11位手机号或者正确的手机号"); 
+    	document.all.form1.mobileNum.focus(); 
+        return false; 
+	} 
+    else
+    {	
+		return true;
+    }
+} 	
+
+
+// 做提交前的校验
+function onLogin() 
+{     
+	//检查是否同意免责申明
+   	if( !document.all.form1.cbAgree.checked)
+	{
+        alert("您还没有同意免责申明"); 
+    	document.all.form1.cbAgree.focus(); 
+        return false; 
+	}
+	else if( document.all.form1.smsCode.value.length != 4)
+	{
+        alert("请输入正确的4位数验证码"); 
+    	document.all.form1.smsCode.focus(); 
+        return false; 
+	}	
+
+	document.all.form1.submit();
+}
+
+//通过Ajax异步给客户指定手机号发送验证码（4位）
+ function sendSMS() 
+ {     
+	var xmlHttp;
+	var mobileNum = document.all.form1.mobileNum.value;
+	var url = "sendSms.php?mobileNum="+mobileNum;
+ 
+	if(checkMobileNum(mobileNum))
+	{
+		//创建xmlHttpRequest对象
+		if (window.ActionXObject)//判断浏览器的兼容性
+	    {
+			xmlHttp = new ActionXObject("Microsoft.XMLHTTP"); /*IE浏览器创建异步对象的方法*/
+	    }
+		else if (window.XMLHttpRequest)
+		{
+			xmlHttp = new XMLHttpRequest(); /*标准的DOM中创建异步对象的方法*/
+		}
+
+		//配置 xmlHttpRequest对象
+		xmlHttp.open("POST", url, true); //用open方法来建立请求open("GET"/"POST","default.aspx",true/false)第一个参数表示访问服务器的方式,第二个参数表示异步请求的地址，第三个参数表示用异步交互(true)还是传统的同步交互(false)
+
+		//调用回调函数
+	    xmlHttp.onreadystatechange = function() //onreadystatechange事件判断异步对象与服务器之间交互的状态，当服务器的交互状态变化时调用该函数
+	    {
+	        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) //xmlHttp.readyState == 4表示与服务器交互的状态是否成功，xmlHttp.status == 200表示服务器的准备状态
+	        {
+	            //do something
+	        	document.getElementById("result").innerHTML = xmlHttp.responseText;
+	        }
+	    }
+	}
+
+	xmlHttp.send(null); //发送准备工作，如果是GET请求则总是为null
+
+ }    
+</script>    
+    
+</head>
+<body>
+<form action="login.php" method="post" name="form1">
+
+    <header>
+        <div class="ad-area">
+            <div class="ad-container ad-container0"><div class="ad-image ad-image0"></div></div>
+            <div class="ad-container ad-container1"><div class="ad-image ad-image1"></div></div>
+
+            <div class="ad-navigation">
+                <span class="item"></span>
+                <span class="item"></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="body">
+        <article>
+            <header>桂林银行网点Wi-Fi网络免责申明</header>
+            <p>尊敬的客户，您好：<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;欢迎使用我行提供的免费Wi-Fi网络，体验电子银行金融服务。我行竭诚提供优质的互联网接入环境，但不承担客户在访问互联网过程中所产生的相关风险。</p>
+            <footer>桂林银行</footer>
+        </article>
+
+        <div class="agree-content">
+            <input type="checkbox" name="cbAgree" id="cbAgree" />
+            <label for="cbAgree">我已阅读并认同免责申明所述内容</label>
+        </div>
+
+        <div class="weixin-area">
+                 	<div class="weixin-notes">
+                    1）连接 <font color="#FFFF00">GuiLinBank</font> 热点<br>
+                    2）关注 <font color="#FFFF00">YXNG520</font> 公众号<br>
+                    3）点击 <font color="#FFFF00">一键上网</font> 菜单<br>
+                    <font size="-1" color="#FFFF00">三步实现：关注微信 一键上网</font>
+                    </div>
+                   
+            <div class="weixin-code"></div>
+        </div>
+    </div>
+
+    <footer></footer>
+
+ 		<input type="hidden" name="gw_address" value="<?php echo empty($data['gw_address'])?'':$data['gw_address'];?>">
+		<input type="hidden" name="gw_port" value="<?php echo empty($data['gw_port'])?'':$data['gw_port'];?>">
+		<input type="hidden" name="gw_id" value="<?php echo empty($data['gw_id'])?'':$data['gw_id'];?>">
+		<input type="hidden" name="url" value="<?php echo empty($data['url'])?'':$data['url'];?>">
+		<input type="hidden" name="mac" value="<?php echo empty($data['mac'])?'':$data['mac'];?>">	      
+		<input type="hidden" name="second" value="1">	      
+</form>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="theme/pc.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/ad-slide.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            initAd();
+        });
+
+    </script>
+<Script type="text/javascript">
+// 做提交前的校验
+function onLogin() 
+{     
+	//检查是否同意免责申明
+   	if( !document.all.form1.cbAgree.checked)
+	{
+        alert("您还没有同意免责申明"); 
+    	document.all.form1.cbAgree.focus(); 
+        return false; 
+	}
+	else if( document.all.form1.WeixinCode.value.length != 6)
+	{
+        alert("① 请先关注微信公众号 YXNG520（已经关注请跳过）\r\n ②点击\"获取验证码\"菜单，\r\n③ 输入您获得的6位数字的验证码"); 
+    	document.all.form1.WeixinCode.focus(); 
+        return false; 
+	}	
+
+	document.all.form1.submit();
+}
+</script>
+</head>
+<body>
+<form action="login.php" method="post" name="form1">
+    <div class="login-main">
+        <div class="header">
+            <div class="ad-area">
+                <div class="ad-container ad-container0"><div class="ad-image ad-image0"></div></div>
+                <div class="ad-container ad-container1"><div class="ad-image ad-image1"></div></div>
+
+                <div class="ad-navigation">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="article">
+                <div class="header"><font color="#FFFF66">桂林银行网点Wi-Fi网络免责申明</font></div>
+                <p>
+                    尊敬的客户，您好：<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;欢迎使用我行提供的免费Wi-Fi网络，体验电子银行金融服务。我行竭诚提供优质的互联网接入环境，但不承担客户在访问互联网过程中所产生的相关风险。
+                </p>
+                <div class="footer">桂林银行</div>
+            </div>
+
+            <div class="agree-content">
+                <input type="checkbox" name="cbAgree" id="cbAgree" />
+                <label for="cbAgree">我已阅读并认同免责申明所述内容</label>
+            </div>
+            <div class="login-area">
+          <table>
+			<tr>
+            	<th colspan="2">★ 请先关注 <font color="#FFFF00" size="+1">YXNG520</font> 公众号请扫描右边二维码），然后通过您的微信获取 <font color="#FFFF00">验证码</font></th>
+           		<td width="121" rowspan="2"><img src="theme/images/weixin-code.jpg" width="120" height="120"></td>
+            </tr>
+                    <tr>
+                        <th width="183"><p>
+                          <input type="text" id="WeixinCode" maxlength="6" name="WeixinCode" value="请输入验证码" style="color:#666666" onFocus="javascript:if(this.value=='请输入验证码') this.value='';" />                       
+                          </p>
+                            </th>
+                        <td width="113">
+                            <input type="button" class="button-login" onClick="javascript:onLogin();" />                        </td>
+                    </tr>
+                </table>
+          </div>
+      </div>
+    </div>
+ 		<input type="hidden" name="gw_address" value="<?php echo empty($data['gw_address'])?'':$data['gw_address'];?>">
+		<input type="hidden" name="gw_port" value="<?php echo empty($data['gw_port'])?'':$data['gw_port'];?>">
+		<input type="hidden" name="gw_id" value="<?php echo empty($data['gw_id'])?'':$data['gw_id'];?>">
+		<input type="hidden" name="url" value="<?php echo empty($data['url'])?'':$data['url'];?>">
+		<input type="hidden" name="mac" value="<?php echo empty($data['mac'])?'':$data['mac'];?>">	      
+		<input type="hidden" name="second" value="1">	      
+</form>
+</body>
+</html>
