@@ -456,7 +456,7 @@ ul.step li:nth-of-type(9)::after {
   position: absolute;
   content: " ";
   background: #fff;
-  height: 5px;
+  height: 3px;
   bottom: 0;
   width: 100%;
 }
@@ -781,4 +781,7 @@ ul.step li {
     margin-top: 24px;
     font-size: 1.5rem;
   }
+}
+.mobile.horizontal-screen .page {
+  height: 200%;
 }
