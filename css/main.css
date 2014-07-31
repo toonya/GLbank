@@ -283,6 +283,12 @@ input#s {
 input#searchsubmit {
   display: none;
 }
+.input-right-angle {
+  border-radius: 0;
+}
+.right-angle {
+  border-radius: 0;
+}
 /* Links */
 a {
   color: #1982d1;
@@ -337,6 +343,10 @@ a:hover {
 .btn-flat.btn-purple {
   background: #b7358f;
   color: #fff;
+}
+.btn-flat.btn-yellow {
+  background: #ffff00;
+  color: #661445;
 }
 .btn-flat.btn-right-angle {
   border-radius: 0;
@@ -404,6 +414,15 @@ ul.step li:nth-of-type(9)::after {
 }
 .text-purple {
   color: #b7358f;
+}
+.text-yellow {
+  color: #ffff00;
+}
+.col-horizontal-left {
+  padding-right: 0;
+}
+.col-horizontal-right {
+  padding-left: 0;
 }
 .mobile {
   background: url(../img/main-bg.jpg);
@@ -550,6 +569,98 @@ ul.step li {
 }
 .bank-name {
   color: #b7358f;
+}
+.desktop {
+  background: #fff;
+}
+.desktop .banner,
+.desktop .agreement,
+.desktop .footer,
+.desktop .page {
+  position: absolute;
+  background: url(../img/main-bg.jpg);
+}
+.desktop .page {
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  max-height: 80%;
+  color: #fff;
+}
+.desktop .banner {
+  position: absolute;
+  width: 60%;
+  height: 320px;
+  top: 0;
+}
+.desktop .banner .carousel-inner,
+.desktop .banner .item {
+  height: 100%;
+}
+.desktop .agreement {
+  width: 40%;
+  right: 0;
+  height: 320px;
+  padding: 24px;
+  font-size: 0.9rem;
+  text-align: justify;
+}
+.desktop .agreement .img-wrapper {
+  width: 75%;
+  margin: 0 auto;
+}
+.desktop .agreement h1 {
+  color: #ffff00;
+  text-align: center;
+  margin: 24px 0;
+  font-size: 1.2rem;
+}
+.desktop .agreement form {
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  left: 0;
+}
+.desktop .footer {
+  top: 320px;
+  width: 100%;
+  background: #661445;
+  position: relative;
+  min-height: 215px;
+  padding: 24px;
+}
+.desktop .footer .support {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-size: .8rem;
+  color: #c0619a;
+}
+.desktop .footer .step {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  font-size: .8rem;
+}
+.desktop .footer .left {
+  position: absolute;
+  left: 0;
+  padding-right: 3%;
+  width: 77.5%;
+}
+.desktop .footer .left .col-horizontal-left {
+  padding-right: 3px;
+}
+.desktop .footer .left button {
+  font-weight: bold;
+}
+.desktop .footer .left form {
+  margin-top: 36px;
+}
+.desktop .footer .right {
+  position: absolute;
+  right: 0;
+  width: 22.5%;
 }
 @media (max-height: 420px) and (max-width: 400px) {
   .mobile .agreement p:nth-of-type(1) {
