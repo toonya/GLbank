@@ -141,6 +141,45 @@ ul.step {
 }
 
 
+// ----------------------------------------
+// ! mportal
+// ----------------------------------------
+.mportal {
+	background: #fff;
+	color: inherit;
+	font-size: 0.9rem;
+
+	.primary {
+		position: absolute;
+		height: 52%;
+		bottom: 9%;
+
+		h1 {
+			font-size: 1.2rem;
+			text-align: center;
+			margin: 12px 0 12px;
+		}
+
+		.btn {
+			margin-top: 12px;
+		}
+
+		p {
+			text-align: justify;
+		}
+	}
+
+	.footer {
+		font-size: 0.8rem;
+		line-height: 1rem;
+	}
+}
+
+.bank-name {
+	.text-purple();
+}
+
+
 //responsive code
 @media (max-height: 420px ) and ( max-width: 400px ) {
 	.mobile .agreement {
@@ -166,6 +205,135 @@ ul.step {
 	.mobile .agreement {
 		p.text-right {
 			display: none;
+		}
+	}
+}
+
+@media (min-width: 400px) {
+	.mobile .connect-step .step-container {
+		width: 90%;
+		left: 5%;
+
+		.left {
+			width: 60%;
+			padding-left: 10%;
+		}
+
+		.right {
+			width: 35%;
+			right: 5%;
+		}
+	}
+
+	.mportal {
+		.primary {
+			font-size: 1rem;
+
+			h1 {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 480px) {
+	.mobile {
+		font-size: 14px;
+
+		.agreement h1, .connect-step .step-describe  {
+			font-size: 16px;
+		}
+	}
+
+	.mobile .connect-step .step-container {
+		width: 90%;
+		left: 5%;
+
+		.left {
+			width: 65%;
+			padding-left: 10%;
+		}
+
+		.right {
+			width: 35%;
+		}
+	}
+
+	.mportal {
+		.primary {
+			font-size: 1.1rem;
+			padding-top: 12px;
+
+			h1 {
+				font-size: 1.3rem;
+			}
+
+			.btn {
+				font-size: 1.1rem;
+			}
+		}
+	}
+}
+
+@media (min-width:580px) {
+	.mobile {
+		.agreement h1, .connect-step .step-describe  {
+			font-size: 16px;
+		}
+	}
+	.mobile .connect-step .step-container {
+		width: 80%;
+		left: 10%;
+
+		.left {
+			width: 60%;
+			padding-left: 10%;
+		}
+
+		.right {
+			width: 40%;
+		}
+	}
+
+	.mportal {
+		.primary {
+			font-size: 1.2rem;
+			padding-top: 24px;
+
+			h1 {
+				font-size: 1.5rem;
+				margin-bottom: 18px;
+			}
+
+			.btn {
+				margin-top: 18px;
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 630px ) {
+	.mobile {
+		.agreement h1, .connect-step .step-describe  {
+			font-size: 18px;
+		}
+	}
+
+	.mportal {
+		.primary {
+			font-size: 1.5rem;
+			padding-top: 48px;
+
+			h1 {
+				font-size: 2rem;
+				margin-bottom: 24px;
+			}
+
+			.btn {
+				margin-top: 24px;
+				font-size: 1.5rem;
+			}
 		}
 	}
 }

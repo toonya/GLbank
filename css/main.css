@@ -334,6 +334,13 @@ a:hover {
   background: #000;
   color: #fff;
 }
+.btn-flat.btn-purple {
+  background: #b7358f;
+  color: #fff;
+}
+.btn-flat.btn-right-angle {
+  border-radius: 0;
+}
 .radius-0 {
   border-radius: 0;
 }
@@ -394,6 +401,9 @@ ul.step li:nth-of-type(8)::after {
 }
 ul.step li:nth-of-type(9)::after {
   content: '9';
+}
+.text-purple {
+  color: #b7358f;
 }
 .mobile {
   background: url(../img/main-bg.jpg);
@@ -513,6 +523,34 @@ ul.step {
 ul.step li {
   line-height: 20px;
 }
+.mportal {
+  background: #fff;
+  color: inherit;
+  font-size: 0.9rem;
+}
+.mportal .primary {
+  position: absolute;
+  height: 52%;
+  bottom: 9%;
+}
+.mportal .primary h1 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 12px 0 12px;
+}
+.mportal .primary .btn {
+  margin-top: 12px;
+}
+.mportal .primary p {
+  text-align: justify;
+}
+.mportal .footer {
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+.bank-name {
+  color: #b7358f;
+}
 @media (max-height: 420px) and (max-width: 400px) {
   .mobile .agreement p:nth-of-type(1) {
     display: none;
@@ -530,5 +568,102 @@ ul.step li {
 @media (max-height: 440px) {
   .mobile .agreement p.text-right {
     display: none;
+  }
+}
+@media (min-width: 400px) {
+  .mobile .connect-step .step-container {
+    width: 90%;
+    left: 5%;
+  }
+  .mobile .connect-step .step-container .left {
+    width: 60%;
+    padding-left: 10%;
+  }
+  .mobile .connect-step .step-container .right {
+    width: 35%;
+    right: 5%;
+  }
+  .mportal .primary {
+    font-size: 1rem;
+  }
+  .mportal .primary h1 {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 480px) {
+  .mobile {
+    font-size: 14px;
+  }
+  .mobile .agreement h1,
+  .mobile .connect-step .step-describe {
+    font-size: 16px;
+  }
+  .mobile .connect-step .step-container {
+    width: 90%;
+    left: 5%;
+  }
+  .mobile .connect-step .step-container .left {
+    width: 65%;
+    padding-left: 10%;
+  }
+  .mobile .connect-step .step-container .right {
+    width: 35%;
+  }
+  .mportal .primary {
+    font-size: 1.1rem;
+    padding-top: 12px;
+  }
+  .mportal .primary h1 {
+    font-size: 1.3rem;
+  }
+  .mportal .primary .btn {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 580px) {
+  .mobile .agreement h1,
+  .mobile .connect-step .step-describe {
+    font-size: 16px;
+  }
+  .mobile .connect-step .step-container {
+    width: 80%;
+    left: 10%;
+  }
+  .mobile .connect-step .step-container .left {
+    width: 60%;
+    padding-left: 10%;
+  }
+  .mobile .connect-step .step-container .right {
+    width: 40%;
+  }
+  .mportal .primary {
+    font-size: 1.2rem;
+    padding-top: 24px;
+  }
+  .mportal .primary h1 {
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+  }
+  .mportal .primary .btn {
+    margin-top: 18px;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 630px) {
+  .mobile .agreement h1,
+  .mobile .connect-step .step-describe {
+    font-size: 18px;
+  }
+  .mportal .primary {
+    font-size: 1.5rem;
+    padding-top: 48px;
+  }
+  .mportal .primary h1 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+  .mportal .primary .btn {
+    margin-top: 24px;
+    font-size: 1.5rem;
   }
 }
