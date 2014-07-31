@@ -581,10 +581,14 @@ ul.step li {
   background: url(../img/main-bg.jpg);
 }
 .desktop .page {
-  top: 10%;
-  left: 10%;
-  right: 10%;
-  max-height: 80%;
+  width: 80%;
+  max-width: 1024px;
+  top: 50%;
+  left: 50%;
+  height: 535px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #fff;
 }
 .desktop .banner {
@@ -626,7 +630,7 @@ ul.step li {
   width: 100%;
   background: #661445;
   position: relative;
-  min-height: 215px;
+  height: 215px;
   padding: 24px;
 }
 .desktop .footer .support {
